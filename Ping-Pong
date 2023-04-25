@@ -112,15 +112,15 @@ while a:
                 exit()
         key_pressed = key.get_pressed()
 
-        if key_pressed[K_UP] and platform1.rect.y > 5:
-            platform1.rect.y -= speed
-        if key_pressed[K_DOWN] and platform1.rect.y < 400:
-            platform1.rect.y += speed
-
-        if key_pressed[K_w] and platform2.rect.y > 5:
+        if key_pressed[K_UP] and platform2.rect.y > 5:
             platform2.rect.y -= speed
-        if key_pressed[K_s] and platform2.rect.y < 400:
+        if key_pressed[K_DOWN] and platform2.rect.y < 400:
             platform2.rect.y += speed
+
+        if key_pressed[K_w] and platform1.rect.y > 5:
+            platform1.rect.y -= speed
+        if key_pressed[K_s] and platform1.rect.y < 400:
+            platform1.rect.y += speed
 
         if ball.colliderect(platform1):
             speed_x *= -1
@@ -169,4 +169,5 @@ while a:
             b = False
         elif score2 >= 3:
             b = False
+            print(123)
 display.update()
