@@ -9,7 +9,7 @@ LIME = (204, 255, 0)
 
 init()
 
-backgroud = transform.scale(image.load('table.png'), (700, 500))
+backgroud = transform.scale(image.load('media/table.png'), (700, 500))
 
 clock = time.Clock()
 FPS = 60
@@ -65,9 +65,9 @@ total_winner = None
 window = display.set_mode((W, H))
 display.set_caption('Ping-Pong(Игра до трёх очков)')
 
-ball = GameSprite('ping_pong.png', 250, 250, 6, 50, 50)
-platform1 = GameSprite('platform.png', 170, 350, 5, 30, 100)
-platform2 = GameSprite('platform.png', 500, 50, 5, 30, 100)
+ball = GameSprite('media/ping_pong.png', 250, 250, 6, 50, 50)
+platform1 = GameSprite('media/platform.png', 170, 350, 5, 30, 100)
+platform2 = GameSprite('media/platform.png', 500, 50, 5, 30, 100)
 
 w = font.SysFont('Arial', 25)
 total = font.SysFont('Arial', 40)
